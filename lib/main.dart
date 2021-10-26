@@ -56,26 +56,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: Theme.of(context).textTheme.headline4,
                     ),
             ),
-            // const Text(
-            //   'Docs in the collection:',
-            // ),
-            // Observer(
-            //   builder: (_) => Container(
-            //     width: MediaQuery.of(context).size.width * 0.5,
-            //     height: MediaQuery.of(context).size.height * 0.5,
-            //     child: ListView(
-            //       children: store.token?.value?.docs
-            //               .map(
-            //                 (doc) => ListTile(
-            //                   title: Text(doc.get('user')),
-            //                   subtitle: Text(doc.get('secret')),
-            //                 ),
-            //               )
-            //               .toList() ??
-            //           <Widget>[],
-            //     ),
-            //   ),
-            // ),
+            const Text(
+              'Docs in the collection:',
+            ),
+            Observer(
+              builder: (_) => Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                height: MediaQuery.of(context).size.height * 0.5,
+                child: ListView(
+                  children: store.token.value.docs
+                          .map<Widget>(
+                            (doc) => ListTile(
+                              title: Text(doc.get('user')),
+                              subtitle: Text(doc.get('secret')),
+                            ),
+                          )
+                          .toList() ??
+                      <Widget>[],
+                ),
+              ),
+            ),
           ],
         ),
       ),
