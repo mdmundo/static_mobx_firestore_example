@@ -79,11 +79,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: store.addToken,
-        tooltip: 'Add to collection',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
