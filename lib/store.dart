@@ -10,7 +10,7 @@ FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 abstract class _Token with Store {
   @observable
-  ObservableFuture? token =
+  ObservableFuture token =
       ObservableFuture(firestore.collection('tokens').get());
 
   @action

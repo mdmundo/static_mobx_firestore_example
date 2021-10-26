@@ -49,10 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
               'How many docs are there in the collection:',
             ),
             Observer(
-              builder: (_) => store.token?.value == null
+              builder: (_) => store.token.value == null
                   ? CircularProgressIndicator()
                   : Text(
-                      '${store.token?.value.size}',
+                      '${store.token.value.size}',
                       style: Theme.of(context).textTheme.headline4,
                     ),
             ),

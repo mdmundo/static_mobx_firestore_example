@@ -12,13 +12,13 @@ mixin _$Token on _Token, Store {
   final _$tokenAtom = Atom(name: '_Token.token');
 
   @override
-  ObservableFuture<dynamic>? get token {
+  ObservableFuture<dynamic> get token {
     _$tokenAtom.reportRead();
     return super.token;
   }
 
   @override
-  set token(ObservableFuture<dynamic>? value) {
+  set token(ObservableFuture<dynamic> value) {
     _$tokenAtom.reportWrite(value, super.token, () {
       super.token = value;
     });
